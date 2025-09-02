@@ -1,4 +1,4 @@
-// Archivo: RecipeDetailScreen.kt
+
 package com.example.exp2_sem3_jaime_valencia
 
 import androidx.compose.foundation.Image

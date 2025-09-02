@@ -70,12 +70,12 @@ fun AppNavigation(
             SplashScreen(navController = navController)
         }
 
-        // Pantalla principal
+
         composable(Routes.HOME) {
             HomeScreen(navController = navController)
         }
 
-        // Pantalla del menú semanal
+
         composable(
             route = Routes.WEEKLY_MENU,
             enterTransition = {
@@ -106,7 +106,7 @@ fun AppNavigation(
             WeeklyMenuScreen(navController = navController)
         }
 
-        // Pantalla de detalle de receta
+
         composable(
             route = Routes.RECIPE_DETAIL,
             enterTransition = {
@@ -134,12 +134,12 @@ fun AppNavigation(
     }
 }
 
-// Extensión para navegación más simple
+
 fun NavHostController.navigateToRecipeDetail(recipeId: Int) {
     navigate(Routes.recipeDetail(recipeId))
 }
 
-// Extensión para navegación con limpieza de back stack
+
 fun NavHostController.navigateAndClearStack(route: String) {
     navigate(route) {
         popUpTo(graph.startDestinationId) {

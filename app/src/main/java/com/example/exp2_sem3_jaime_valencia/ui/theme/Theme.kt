@@ -13,16 +13,16 @@ import androidx.compose.ui.unit.sp
 
 
 
-// Paleta de colores inspirada en ingredientes chilenos
-private val ChileanRed = Color(0xFFD32F2F)      // Rojo ají
-private val ChileanGreen = Color(0xFF388E3C)     // Verde palta
-private val ChileanYellow = Color(0xFFFBC02D)    // Amarillo choclo
-private val ChileanOrange = Color(0xFFFF8F00)    // Naranja zapallo
-private val ChileanBrown = Color(0xFF5D4037)     // Café tierra
-private val WarmWhite = Color(0xFFFFFEF7)        // Blanco cálido
-private val SoftGray = Color(0xFFF5F5F5)         // Gris suave
 
-// Esquema de colores para modo claro
+private val ChileanRed = Color(0xFFD32F2F)
+private val ChileanGreen = Color(0xFF388E3C)
+private val ChileanYellow = Color(0xFFFBC02D)
+private val ChileanOrange = Color(0xFFFF8F00)
+private val ChileanBrown = Color(0xFF5D4037)
+private val WarmWhite = Color(0xFFFFFEF7)
+private val SoftGray = Color(0xFFF5F5F5)
+
+
 private val LightColorScheme = lightColorScheme(
     primary = ChileanGreen,
     onPrimary = Color.White,
@@ -52,7 +52,7 @@ private val LightColorScheme = lightColorScheme(
     inversePrimary = Color(0xFFB2DFDB)
 )
 
-// Esquema de colores para modo oscuro
+
 private val DarkColorScheme = darkColorScheme(
     primary = Color(0xFFB2DFDB),
     onPrimary = Color(0xFF003D33),
@@ -81,11 +81,9 @@ private val DarkColorScheme = darkColorScheme(
     inverseSurface = Color(0xFFE6E1E5),
     inversePrimary = ChileanGreen
 )
-
-// Sistema de tipografía personalizado con las fuentes locales
 val AppTypography = Typography(
     displayLarge = TextStyle(
-        fontFamily = CustomFontFamily, // Usas la fuente importada
+        fontFamily = CustomFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 57.sp,
         lineHeight = 64.sp,
@@ -99,7 +97,7 @@ val AppTypography = Typography(
         letterSpacing = 0.sp
     ),
     headlineLarge = TextStyle(
-        fontFamily = TitleFontFamily, // Usas la fuente importada para títulos
+        fontFamily = TitleFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 32.sp,
         lineHeight = 40.sp,
@@ -198,17 +196,17 @@ fun ChileanRecipesTheme(
     )
 }
 
-// Colores adicionales para elementos específicos
+
 object AppColors {
-    val CaloriesColor = Color(0xFFFF6B6B)      // Rojo suave para calorías
-    val ProteinsColor = Color(0xFF4ECDC4)      // Verde agua para proteínas
-    val DifficultyEasy = Color(0xFF66BB6A)     // Verde para fácil
-    val DifficultyMedium = Color(0xFFFFB74D)   // Naranja para intermedio
-    val DifficultyHard = Color(0xFFE57373)     // Rojo para difícil
-    val CardBackground = Color(0xFFFAFAFA)     // Fondo de tarjetas
-    val DividerColor = Color(0xFFE0E0E0)       // Color de divisores
-    val BreakfastColor = Color(0xFFFFF9C4)  // Amarillo pálido
-    val LunchColor = Color(0xFFB2EBF2)      // Azul claro
-    val SnackColor = Color(0xFFFFECB3)      // Naranja pálido
-    val DinnerColor = Color(0xFFD1C4E9)     // Púrpura claro
+    val CaloriesColor = Color(0xFFFF6B6B)
+    val ProteinsColor = Color(0xFF4ECDC4)
+    val DifficultyEasy = Color(0xFF66BB6A)
+    val DifficultyMedium = Color(0xFFFFB74D)
+    val DifficultyHard = Color(0xFFE57373)
+    val CardBackground = Color(0xFFFAFAFA)
+    val DividerColor = Color(0xFFE0E0E0)
+    val BreakfastColor = Color(0xFFFFF9C4)
+    val LunchColor = Color(0xFFB2EBF2)
+    val SnackColor = Color(0xFFFFECB3)
+    val DinnerColor = Color(0xFFD1C4E9)
 }

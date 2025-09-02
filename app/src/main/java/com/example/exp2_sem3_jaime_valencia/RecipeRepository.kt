@@ -1,11 +1,10 @@
 package com.example.exp2_sem3_jaime_valencia
 
-// Archivo: repository/RecipeRepository.kt
 import android.content.Context
 
 class RecipeRepository {
 
-    // Array de recetas chilenas típicas
+
     private val recipes = arrayOf(
         Recipe(
             id = 1,
@@ -18,7 +17,7 @@ class RecipeRepository {
             tiempoPreparacion = 45,
             calorias = 320,
             proteinas = 15.5,
-            imagen = R.drawable.empanadas, // Necesitarás agregar esta imagen
+            imagen = R.drawable.empanadas,
             dificultad = Difficulty.MEDIUM,
             categoria = Category.LUNCH
         ),
@@ -114,32 +113,32 @@ class RecipeRepository {
         )
     )
 
-    // Función para obtener todas las recetas
+
     fun getAllRecipes(): Array<Recipe> {
         return recipes
     }
 
-    // Función para obtener recetas por categoría
+
     fun getRecipesByCategory(category: Category): List<Recipe> {
         return recipes.filter { it.categoria == category }
     }
 
-    // Función para buscar receta por ID
+
     fun getRecipeById(id: Int): Recipe? {
         return recipes.find { it.id == id }
     }
 
-    // Función para generar un menú semanal aleatorio
+
     fun generateWeeklyMenu(): List<DailyMenu> {
         val weeklyMenu = mutableListOf<DailyMenu>()
 
-        // Obtenemos las recetas por categoría para facilitar la asignación
+
         val breakfastRecipes = getRecipesByCategory(Category.BREAKFAST)
         val lunchRecipes = getRecipesByCategory(Category.LUNCH)
         val dinnerRecipes = getRecipesByCategory(Category.DINNER)
         val snackRecipes = getRecipesByCategory(Category.SNACK)
 
-        // Generamos un menú para cada día de la semana
+
         DayOfWeek.values().forEach { day ->
             weeklyMenu.add(
                 DailyMenu(
@@ -155,7 +154,7 @@ class RecipeRepository {
         return weeklyMenu
     }
 
-    // Función para calcular información nutricional de un menú semanal
+
     fun calculateNutritionalInfo(weeklyMenu: List<DailyMenu>): NutritionalInfo {
         var totalcalorias = 0
         var totalproteinas = 0.0
