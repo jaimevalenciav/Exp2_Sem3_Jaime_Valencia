@@ -11,76 +11,79 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
+// Bootstrap Color Palette
+private val BootstrapPrimary = Color(0xFF0D6EFD)
+private val BootstrapSecondary = Color(0xFF6C757D)
+private val BootstrapSuccess = Color(0xFF198754)
+private val BootstrapDanger = Color(0xFFDC3545)
+private val BootstrapWarning = Color(0xFFFFC107)
+private val BootstrapInfo = Color(0xFF0DCAF0)
+private val BootstrapLight = Color(0xFFF8F9FA)
+private val BootstrapDark = Color(0xFF212529)
 
-
-
-private val ChileanRed = Color(0xFFD32F2F)
-private val ChileanGreen = Color(0xFF388E3C)
-private val ChileanYellow = Color(0xFFFBC02D)
-private val ChileanOrange = Color(0xFFFF8F00)
-private val ChileanBrown = Color(0xFF5D4037)
-private val WarmWhite = Color(0xFFFFFEF7)
-private val SoftGray = Color(0xFFF5F5F5)
-
+// Additional Bootstrap-inspired colors
+private val BootstrapWhite = Color(0xFFFFFFFF)
+private val BootstrapMuted = Color(0xFF6C757D)
+private val BootstrapBorder = Color(0xFFDEE2E6)
 
 private val LightColorScheme = lightColorScheme(
-    primary = ChileanGreen,
-    onPrimary = Color.White,
-    primaryContainer = Color(0xFFE8F5E8),
-    onPrimaryContainer = Color(0xFF1B5E20),
-    secondary = ChileanOrange,
-    onSecondary = Color.White,
-    secondaryContainer = Color(0xFFFFF3E0),
-    onSecondaryContainer = Color(0xFFE65100),
-    tertiary = ChileanYellow,
-    onTertiary = Color.Black,
-    tertiaryContainer = Color(0xFFFFF8E1),
-    onTertiaryContainer = Color(0xFFF57F17),
-    error = ChileanRed,
-    errorContainer = Color(0xFFFFEBEE),
-    onError = Color.White,
-    onErrorContainer = ChileanRed,
-    background = WarmWhite,
-    onBackground = Color(0xFF1C1B1F),
-    surface = Color.White,
-    onSurface = Color(0xFF1C1B1F),
-    surfaceVariant = SoftGray,
-    onSurfaceVariant = Color(0xFF49454F),
-    outline = Color(0xFF79747E),
-    inverseOnSurface = Color(0xFFF4EFF4),
-    inverseSurface = Color(0xFF313033),
-    inversePrimary = Color(0xFFB2DFDB)
+    primary = BootstrapPrimary,
+    onPrimary = BootstrapWhite,
+    primaryContainer = Color(0xFFCFE2FF),
+    onPrimaryContainer = Color(0xFF031633),
+    secondary = BootstrapSecondary,
+    onSecondary = BootstrapWhite,
+    secondaryContainer = Color(0xFFE2E3E5),
+    onSecondaryContainer = Color(0xFF1C1E21),
+    tertiary = BootstrapInfo,
+    onTertiary = BootstrapDark,
+    tertiaryContainer = Color(0xFFCFF4FC),
+    onTertiaryContainer = Color(0xFF032830),
+    error = BootstrapDanger,
+    errorContainer = Color(0xFFFFDAD6),
+    onError = BootstrapWhite,
+    onErrorContainer = Color(0xFF410002),
+    background = BootstrapWhite,
+    onBackground = BootstrapDark,
+    surface = BootstrapWhite,
+    onSurface = BootstrapDark,
+    surfaceVariant = BootstrapLight,
+    onSurfaceVariant = Color(0xFF495057),
+    outline = BootstrapBorder,
+    inverseOnSurface = BootstrapLight,
+    inverseSurface = BootstrapDark,
+    inversePrimary = Color(0xFF9FC5FF)
 )
-
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Color(0xFFB2DFDB),
-    onPrimary = Color(0xFF003D33),
-    primaryContainer = Color(0xFF00574B),
-    onPrimaryContainer = Color(0xFFB2DFDB),
-    secondary = Color(0xFFFFB74D),
-    onSecondary = Color(0xFF3E2723),
-    secondaryContainer = Color(0xFF8D6E63),
-    onSecondaryContainer = Color(0xFFFFCC80),
-    tertiary = Color(0xFFFFF176),
-    onTertiary = Color(0xFF333000),
-    tertiaryContainer = Color(0xFF4A4635),
-    onTertiaryContainer = Color(0xFFFFF59D),
-    error = Color(0xFFCF6679),
-    errorContainer = Color(0xFFB00020),
-    onError = Color.Black,
-    onErrorContainer = Color(0xFFFCD8DF),
+    primary = Color(0xFF9FC5FF),
+    onPrimary = Color(0xFF031633),
+    primaryContainer = Color(0xFF0A4A90),
+    onPrimaryContainer = Color(0xFFCFE2FF),
+    secondary = Color(0xFFADB5BD),
+    onSecondary = Color(0xFF1C1E21),
+    secondaryContainer = Color(0xFF495057),
+    onSecondaryContainer = Color(0xFFE2E3E5),
+    tertiary = Color(0xFF76D7EA),
+    onTertiary = Color(0xFF032830),
+    tertiaryContainer = Color(0xFF0A525C),
+    onTertiaryContainer = Color(0xFFCFF4FC),
+    error = Color(0xFFFFB4AB),
+    errorContainer = Color(0xFF93000A),
+    onError = Color(0xFF410002),
+    onErrorContainer = Color(0xFFFFDAD6),
     background = Color(0xFF121212),
-    onBackground = Color(0xFFE6E1E5),
-    surface = Color(0xFF1D1B20),
-    onSurface = Color(0xFFE6E1E5),
-    surfaceVariant = Color(0xFF49454F),
-    onSurfaceVariant = Color(0xFFCAC4D0),
-    outline = Color(0xFF938F99),
-    inverseOnSurface = Color(0xFF313033),
-    inverseSurface = Color(0xFFE6E1E5),
-    inversePrimary = ChileanGreen
+    onBackground = Color(0xFFE3E3E3),
+    surface = Color(0xFF1C1B1F),
+    onSurface = Color(0xFFE3E3E3),
+    surfaceVariant = Color(0xFF343A40),
+    onSurfaceVariant = Color(0xFFADB5BD),
+    outline = Color(0xFF495057),
+    inverseOnSurface = Color(0xFF1C1B1F),
+    inverseSurface = Color(0xFFE3E3E3),
+    inversePrimary = BootstrapPrimary
 )
+
 val AppTypography = Typography(
     displayLarge = TextStyle(
         fontFamily = CustomFontFamily,
@@ -196,17 +199,26 @@ fun ChileanRecipesTheme(
     )
 }
 
-
 object AppColors {
-    val CaloriesColor = Color(0xFFFF6B6B)
-    val ProteinsColor = Color(0xFF4ECDC4)
-    val DifficultyEasy = Color(0xFF66BB6A)
-    val DifficultyMedium = Color(0xFFFFB74D)
-    val DifficultyHard = Color(0xFFE57373)
-    val CardBackground = Color(0xFFFAFAFA)
-    val DividerColor = Color(0xFFE0E0E0)
-    val BreakfastColor = Color(0xFFFFF9C4)
-    val LunchColor = Color(0xFFB2EBF2)
-    val SnackColor = Color(0xFFFFECB3)
-    val DinnerColor = Color(0xFFD1C4E9)
+    val CaloriesColor = BootstrapDanger
+    val ProteinsColor = BootstrapInfo
+    val DifficultyEasy = BootstrapSuccess
+    val DifficultyMedium = BootstrapWarning
+    val DifficultyHard = BootstrapDanger
+    val CardBackground = BootstrapLight
+    val DividerColor = BootstrapBorder
+    val BreakfastColor = Color(0xFFFFD85D)
+    val LunchColor = Color(0xFF53D1E8)
+    val SnackColor = Color(0xFFEEB427)
+    val DinnerColor = Color(0xFF4C4EF6)
+    val Primary = BootstrapPrimary
+    val Secondary = BootstrapSecondary
+    val Success = BootstrapSuccess
+    val Danger = BootstrapDanger
+    val Warning = BootstrapWarning
+    val Info = BootstrapInfo
+    val Light = BootstrapLight
+    val Dark = BootstrapDark
+    val White = BootstrapWhite
+    val Muted = BootstrapMuted
 }
